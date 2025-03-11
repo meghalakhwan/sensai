@@ -1,7 +1,7 @@
 import { getResume } from "@/actions/resume";
 import ResumeBuilder from "./_components/resume-builder";
 
-export default async function ResumePage() {
+const ResumePage = async() => {
   const resume = await getResume();
 
   return (
@@ -9,4 +9,5 @@ export default async function ResumePage() {
       <ResumeBuilder initialContent={resume?.content} />
     </div>
   );
-}
+};
+export default ResumePage;
